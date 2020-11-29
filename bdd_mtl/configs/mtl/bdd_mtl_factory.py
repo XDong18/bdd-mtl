@@ -8,7 +8,7 @@ class BddMtlConfig:
         self.train_cfg = dict()
         self.test_cfg = dict()
         self.dataset_type = []
-        self.data_root = 'data/bdd100k/'
+        self.data_root = '/shared/xudongliu/bdd100k/seg/seg/'
         self.img_norm_cfg = dict(
             mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
         self.data = dict(
@@ -54,7 +54,7 @@ def get_model_config(model_name):
     if model_name == 'dla34up':
         model_config = dict(
             type='MTL',
-            pretrained='weights/dla34-ba72cf86.pth',
+            pretrained='/shared/xudongliu/code/weights/dla34-ba72cf86.pth',
             backbone=dict(
                 type='DLA',
                 levels=[1, 1, 1, 2, 2, 1],
@@ -71,7 +71,7 @@ def get_model_config(model_name):
     elif model_name == 'dla34':
         model_config = dict(
             type='MTL',
-            pretrained='weights/dla34-ba72cf86.pth',
+            pretrained='/shared/xudongliu/code/weights/dla34-ba72cf86.pth',
             backbone=dict(
                 type='DLA',
                 levels=[1, 1, 1, 2, 2, 1],

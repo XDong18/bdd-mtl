@@ -547,11 +547,11 @@ def add_sem_seg_data(cfg):
     cfg.dataset_type.append(['BddSemanticSeg'])
     cfg.data['train'].append(
         dict(type='BddSemanticSeg',
-            image_dir=cfg.data_root+'images/10k/train/',
-            label_dir=cfg.data_root+'labels/sem_seg/sem_seg_train',
+            image_dir=cfg.data_root+'images/train',
+            label_dir=cfg.data_root+'labels/train',
             phase='train',
             flip_ratio=0.5,
-            img_prefix=cfg.data_root+'images/10k/train/',
+            img_prefix=cfg.data_root+'images/train',
             img_scale=(1280, 720),
             crop_size=(640, 640),
             img_norm_cfg=cfg.img_norm_cfg,
@@ -563,11 +563,11 @@ def add_sem_seg_data(cfg):
     )
     cfg.data['val'].append(
         dict(type='BddSemanticSeg',
-            image_dir=cfg.data_root+'images/10k/val/',
-            label_dir=cfg.data_root+'labels/sem_seg/sem_seg_val',
+            image_dir=cfg.data_root+'images/val/',
+            label_dir=cfg.data_root+'labels/val',
             phase='val',
             flip_ratio=0,
-            img_prefix=cfg.data_root+'images/10k/val/',
+            img_prefix=cfg.data_root+'images/val/',
             img_scale=(1280, 720),
             img_norm_cfg=cfg.img_norm_cfg,
             size_divisor=32,
@@ -579,11 +579,11 @@ def add_sem_seg_data(cfg):
     )
     cfg.data['test'].append(
         dict(type='BddSemanticSeg',
-            image_dir=cfg.data_root+'images/10k/val/',
-            label_dir=cfg.data_root+'labels/sem_seg/sem_seg_val',
+            image_dir=cfg.data_root+'images/val/',
+            label_dir=cfg.data_root+'labels/val',
             phase='val',
             flip_ratio=0,
-            img_prefix=cfg.data_root+'images/10k/val/',
+            img_prefix=cfg.data_root+'images/val/',
             img_scale=(1280, 720),
             img_norm_cfg=cfg.img_norm_cfg,
             size_divisor=32,
