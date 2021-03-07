@@ -1,7 +1,7 @@
 import motmetrics as mm
 from collections import defaultdict
 # from pycocotools.bdd import BDD
-from pycocotools.videoeval import VideoEval
+# from pycocotools.videoeval import VideoEval
 import numpy as np
 
 
