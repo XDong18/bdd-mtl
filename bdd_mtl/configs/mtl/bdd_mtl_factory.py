@@ -1,7 +1,6 @@
 from tasks import add_task_config
 
 class BddMtlConfig:
-
     def __init__(self, model_name):
         self.norm_cfg = dict(type='GN', num_groups=32, requires_grad=True)
         self.model = get_model_config(model_name)
